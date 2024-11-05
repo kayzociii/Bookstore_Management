@@ -1,0 +1,19 @@
+﻿@model List<QuanLyBanSach_63134290.Models.CHUDE>
+
+
+
+<div class="panel-group category-products" id="accordian">
+    <!--category-productsr-->
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#">
+                        @Html.ActionLink(item.TenChuDe, "TimKiemTheoChuDe", "BookStore_63134290", new { @Id = item.MaChuDe }, null)
+                    </a>
+                </h4>
+            </div>
+        </div>
+    }
+</div><!--/category-products-->

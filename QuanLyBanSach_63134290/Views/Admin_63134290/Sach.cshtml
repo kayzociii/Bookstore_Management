@@ -1,0 +1,78 @@
+﻿@model IEnumerable<QuanLyBanSach_63134290.Models.SACH>
+
+@{
+    ViewBag.Title = "Sach";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+
+    
+                        
+                        <div class="d-sm-flex align-items-center justify-content-between border-bottom" , style="padding-top: 100px;">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MaSach)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.TenSach)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MoTa)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.GiaSach)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.AnhBiaSach)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.SoLuongTon)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NgayCapNhat)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MaChuDe)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MaSach)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TenSach)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MoTa)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.GiaSach)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.AnhBiaSach)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SoLuongTon)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MaChuDe)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Tạo mới", "ThemSach") |
+                                            @Html.ActionLink("Sửa ", "SuaSach", new { id = item.MaSach }) |
+                                            @Html.ActionLink("Chi tiết", "ChiTietSach", new { id = item.MaSach }) |
+                                            @Html.ActionLink("Xóa", "XoaSach", new { id = item.MaSach })
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+            </div>
+               

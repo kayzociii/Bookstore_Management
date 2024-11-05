@@ -1,0 +1,37 @@
+﻿@model QuanLyBanSach_63134290.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="form", style="display: flex; align-items: center; justify-content: center; ">
+        <div class="card">
+            <h2 align="center">
+                ĐĂNG NHẬP
+            </h2>
+            <div class="card-body">
+                @using (Html.BeginForm("DangNhap", "BookStore_63134290", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TaiKhoan, "Tên tài khoản")
+                        @Html.TextBoxFor(m => m.TaiKhoan, "", new { @class = "form-control", @placeholder = "Nhập vào tên tài khoản" })
+
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.MatKhau, "Mật khẩu")
+                        @Html.PasswordFor(m => m.MatKhau, new { @class = "form-control", @placeholder = "Nhập vào mật khẩu" })
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Đăng nhập" />
+                    </div>
+                }
+        </div>
+    </div>
+</div>
+
+<div class="text-center" style="padding-bottom: 20px">
+    @Html.ActionLink("Chưa có tài khoản? Đăng ký ngay", "DangKy")
+</div>
+

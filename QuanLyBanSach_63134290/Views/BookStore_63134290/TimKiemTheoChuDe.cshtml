@@ -1,0 +1,52 @@
+﻿@model QuanLyBanSach_63134290.Models.HomeModel_63134290
+
+@{
+    ViewBag.Title = "TimKiemTheoChuDe";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="left-sidebar">
+                    <div class="left-sidebar">
+                        <h2>DANH MỤC SẢN PHẨM</h2>
+                        @Html.Action("ChuDe", "BookStore_63134290")
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                <div class="features_items">
+                    <!--features_items-->
+                    @foreach (var item in Model.ListSach)
+                    {
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="~/images/@item.AnhBiaSach" alt="" />
+                                        <h2>@item.GiaSach đ</h2>
+                                        <p>@item.TenSach</p>
+                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h2>@item.GiaSach</h2>
+                                            <p>@item.TenSach</p>
+                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div><!--features_items-->
+            </div>
+        </div>
+    </div>
+</section>
+
+

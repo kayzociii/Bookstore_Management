@@ -1,0 +1,82 @@
+﻿@model QuanLyBanSach_63134290.Models.SACH
+
+@{
+    ViewBag.Title = "XoaSach";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>XÁC NHẬN THÔNG TIN SÁCH CẦN XÓA</h2>
+
+<h3>BẠN CÓ MUỐN XÓA QUYỂN SÁCH NÀY KHÔNG?</h3>
+<div class="d-sm-flex align-items-center justify-content-between border-bottom" , style="padding-top: 50px;">
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Tên Sách:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSach)
+        </dd>
+
+        <dt>
+            Mô Tả:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            Giá bán sách:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaSach)
+        </dd>
+
+        <dt>
+            Ảnh bìa:
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/" + Model.AnhBiaSach)" width="120" />
+        </dd>
+
+        <dt>
+            Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+        <dt>
+            Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayCapNhat)
+        </dd>
+
+        <dt>
+            Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUDE.TenChuDe)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở Về", "Sach")
+        </div>
+    }
+</div>

@@ -1,0 +1,74 @@
+﻿@model QuanLyBanSach_63134290.Models.SACH
+@{
+    ViewBag.Title = "ChiTietSach";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 align="center">CHI TIẾT SÁCH</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            Tên Sách: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSach)
+        </dd>
+
+        <dt>
+            Mô Tả:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            Giá bán sách: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaSach)
+        </dd>
+
+        <dt>
+            Ảnh bìa: 
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/images/" + Model.AnhBiaSach)" width="120"/>
+        </dd>
+
+        <dt>
+            Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+        <dt>
+            Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayCapNhat)
+        </dd>
+
+        <dt>
+            Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUDE.TenChuDe)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ĐIỀU CHỈNH", "SuaSach", new { id = Model.MaSach }) |
+    @Html.ActionLink("TRỜ VỀ", "Sach")
+</p>

@@ -1,0 +1,93 @@
+﻿@model QuanLyBanSach_63134290.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<head>
+    <style>
+        .form-group {
+            font-size: 16px;
+        }
+
+        .control-label {
+            font-weight: 500;
+            padding-right: 30px;
+        }
+    </style>
+</head>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h2 align="center">ĐĂNG KÝ</h2>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.HoTen, "Họ và tên", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" , style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NgaySinh, "Ngày sinh", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control", type = "date", style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TaiKhoan, "Tên tài khoản", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.TaiKhoan, new { htmlAttributes = new { @class = "form-control", style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.TaiKhoan, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MatKhau, "Mật khẩu", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control", type = "password", style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DiaChiKH, "Địa chỉ",  htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DiaChiKH, new { htmlAttributes = new { @class = "form-control", style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.DiaChiKH, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DienThoaiKH, "Số điện thoại", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DienThoaiKH, new { htmlAttributes = new { @class = "form-control", style = "width: 50%;" } })
+            @Html.ValidationMessageFor(model => model.DienThoaiKH, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10", style="padding-left: 450px;">
+            <input type="submit" value="Tạo tài khoản" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}
+
+<div class="text-center" style="padding-bottom: 20px">
+    @Html.ActionLink("Quay lại trang chủ", "Index")
+</div>
