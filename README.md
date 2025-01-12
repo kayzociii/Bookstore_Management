@@ -1,9 +1,10 @@
-# Bookstore Website
+# Bookstore Management
 
 ![C#](https://img.shields.io/badge/C%23-.NET%20MVC-blueviolet)
 ![Microsoft SQL Server](https://img.shields.io/badge/Database-Microsoft%20SQL%20Server-red)
 ![HTML](https://img.shields.io/badge/Frontend-HTML-orange)
 ![CSS](https://img.shields.io/badge/Frontend-CSS-blue)
+![JavaScript](https://img.shields.io/badge/Frontend-JS-orange)
 
 ## Overview
 This project is a comprehensive **Bookstore Management System** designed to provide a seamless experience for both customers and administrators. The system allows customers to shop online efficiently and assists administrators in managing inventory and customer data effectively.
@@ -24,7 +25,7 @@ This project is a comprehensive **Bookstore Management System** designed to prov
 ---
 
 ## Technologies Used
-- **Frontend**: Razor Views, HTML, CSS, JavaScript
+- **Frontend**: HTML, CSS, JavaScript
 - **Backend**: C# (.NET MVC Framework)
 - **Database**: Microsoft SQL Server
 
@@ -38,7 +39,7 @@ This project is a comprehensive **Bookstore Management System** designed to prov
 
 2. **Navigate to the project directory**:
    ```bash
-   cd bookstore-website
+   cd bookstore-management
    ```
 
 3. **Set up the environment**:
