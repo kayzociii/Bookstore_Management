@@ -1,10 +1,9 @@
 # Bookstore Website
 
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/bookstore-website)
-![GitHub contributors](https://img.shields.io/github/contributors/your-username/bookstore-website)
-![GitHub stars](https://img.shields.io/github/stars/your-username/bookstore-website?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/bookstore-website?style=social)
-![GitHub license](https://img.shields.io/github/license/your-username/bookstore-website)
+![C#](https://img.shields.io/badge/C%23-.NET%20MVC-blueviolet)
+![Microsoft SQL Server](https://img.shields.io/badge/Database-Microsoft%20SQL%20Server-red)
+![HTML](https://img.shields.io/badge/Frontend-HTML-orange)
+![CSS](https://img.shields.io/badge/Frontend-CSS-blue)
 
 ## Overview
 This project is a comprehensive **Bookstore Management System** designed to provide a seamless experience for both customers and administrators. The system allows customers to shop online efficiently and assists administrators in managing inventory and customer data effectively.
@@ -63,14 +62,6 @@ This project is a comprehensive **Bookstore Management System** designed to prov
 
 ---
 
-## Contribution Guidelines
-We welcome contributions from the community! If you'd like to contribute:
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Submit a pull request with a detailed description of your changes.
-
----
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
@@ -81,8 +72,5 @@ For any inquiries, please contact:
 - **Email**: kayzociii@gmail.com
 - **GitHub**: [kayzociii]((https://github.com/kayzociii))
 
----
-
-Thank you for using our Bookstore Management System!
 
 
